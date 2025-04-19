@@ -3,11 +3,21 @@ models:
     description: "Staging model for the store product stock table"
     columns:
       - name: store_id
-        description: "unique identifier of the store"
+        description: "Foreign key, unique identifier of the store"
         data_type: integer
+        tests:
+          - relationships:
+              to: ref('stg_stores')
+              field: store_id
+
       - name: product_id
-        description: "unique identifier of the product"
+        description: "Foreign key, unique identifier of the product"
         data_type: integer
+        tests:
+          - relationships:
+              to: ref('stg_products')
+              field: product_id
+
       - name: stock_quantity
         description: "quantity in stock of the product for the store"
         data_type: integer

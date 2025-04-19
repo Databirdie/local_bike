@@ -3,8 +3,12 @@ models:
     description: "Staging model for the stores table"
     columns:
       - name: store_id
-        description: "unique identifier of the store"
+        description: "Primary key, unique identifier of the store"
         data_type: integer
+        data_tests:
+          - unique
+          - not_null
+          
       - name: store_name
         description: "name of the store"
         data_type: varchar

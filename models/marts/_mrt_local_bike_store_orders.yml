@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: mrt_local_bike_store_orders
+    description: '{{ doc("mrt_local_bike_store_orders") }}'
+    columns:
+      - name: store_address_zip_code
+      - name: store_name
+      - name: staff_first_name
+      - name: staff_last_name
+      - name: customer
+      - name: first_name
+      - name: customer_last_name
+      - name: customer_address_zip_code
+      - name: order_id
+      - name: product_name
+      - name: product_category_name
+      - name: brand_name
+      - name: order_created_at
+      - name: order_shipped_at
+      - name: is_order_shipped
+      - name: pending_order_item_number
+      - name: available_quantity
+      - name: is_out_of_stock_item
+      - name: list_price
+      - name: pending_order_turnover_before_discount
+      - name: pending_order_turnover
+      - name: order_turnover_before_discount
+      - name: order_turnover
+
+      
