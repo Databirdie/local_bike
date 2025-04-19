@@ -5,3 +5,4 @@ sources:
     schema: local_bike
     tables:
       - name: brands
+      - name: orders
