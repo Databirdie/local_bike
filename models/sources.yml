@@ -11,4 +11,5 @@ sources:
       - name: customers
       - name: categories
       - name: stores
+      - name: staffs
       
