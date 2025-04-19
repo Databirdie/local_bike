@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: "Staging model for the orders table"
+    columns:
+      - name: order_id
+        description: "unique identifier of the order"
+        data_type: integer
+      - name: customer_id
+        description: "unique identifier of the customer"
+        data_type: integer
+      - name: store_id
+        description: "unique identifer of the shop"
+        data_type: integer
+      - name: staff_id
+        description: "unique identifier of the staff member"
+        data_type: integer
+      - name: order_status_id
+        description: "unique identifier of the order shpping status"
+        data_type: integer
+      - name: order_status_name
+        description: "shipping status of the order"
+        data_type: varchar
+      - name: order_created_at
+        description: "date when the order was placed"
+        data_type: date
+      - name: order_forecast_shipping_date
+        description: "deadline date when the order must be shipped"
+        data_type: date
+      - name: order_shipped_at
+        description: "date when the order was shipped"
+        data_type: date
+      
