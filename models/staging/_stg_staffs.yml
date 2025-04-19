@@ -14,7 +14,7 @@ models:
         data_type: integer
         tests:
           - relationships:
-              to: ref('stg_stotres')
+              to: ref('stg_stores')
               field: store_id
 
       - name: manager_id
