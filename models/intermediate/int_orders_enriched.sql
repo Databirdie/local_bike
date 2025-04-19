@@ -13,7 +13,6 @@ SELECT  sto.store_name
 , o.order_shipped_at
 , case when o.order_shipped_at < '2500-01-01' then true else false end as is_order_shipped
 , case when o.order_shipped_at = '2500-01-01' then oi.ordered_quantity else 0 end as pending_order_item_number
-, case when st.stock_quantity < oi.ordered_quantity then true else false end as is_out_of_stock_item
 , oi.list_price
 , case when o.order_shipped_at = '2500-01-01' then round(oi.ordered_quantity * oi.list_price,2) else 0 end as pending_order_turnover_before_discount
 , case when o.order_shipped_at = '2500-01-01' then round(oi.ordered_quantity * (oi.list_price - (oi.list_price * oi.discount)),2) else 0 end as pending_order_turnover
