@@ -9,4 +9,5 @@ sources:
       - name: order_items
       - name: products
       - name: customers
+      - name: categories
       
