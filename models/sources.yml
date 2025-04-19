@@ -13,4 +13,5 @@ sources:
       - name: stores
       - name: staffs
       - name: stocks
+      - name: us_geo
       

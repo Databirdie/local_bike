@@ -1,0 +1,19 @@
+models:
+  - name: stg_us_geo
+    description: "Staging model for the geo data table"
+    columns:
+      - name: city_name
+        description: "name of the US city"
+        data_type: varchar
+      - name: state_name
+        description: "name of the US state"
+        data_type: varchar
+      - name: zip_code
+        description: "zip code of the US city"
+        data_type: integer
+      - name: latitude
+        description: "latitude of the US city"
+        data_type: decimal
+      - name: longitude
+        description: "longitude of the US city"
+        data_type: decimal
