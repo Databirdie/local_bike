@@ -8,4 +8,5 @@ sources:
       - name: orders
       - name: order_items
       - name: products
+      - name: customers
       
