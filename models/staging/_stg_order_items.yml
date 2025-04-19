@@ -12,11 +12,11 @@ models:
       - name: product_id
         data_type: integer
         description: "unique identifier of the product"
-      - name: quantity
+      - name: ordered_quantity
         description: "number of items in the order"
         data_type: integer
       - name: list_price
-        description: "price of items in the order"
+        description: "basic price of an item before discount"
         data_type: decimal
       - name: discount
         description: "discount offered on the order"
