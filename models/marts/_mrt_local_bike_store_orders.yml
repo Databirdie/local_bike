@@ -5,27 +5,58 @@ models:
     description: '{{ doc("mrt_local_bike_store_orders") }}'
     columns:
       - name: store_address_zip_code
+        description: "zip code of the store address"
+        data_type: integer
       - name: store_name
-      - name: staff_first_name
-      - name: staff_last_name
-      - name: customer
-      - name: first_name
-      - name: customer_last_name
+        description: "name of the store"
+        data_type: varchar
+      - name: staff_name
+        description: "first and last name of the store staff member who made the deal"
+        data_type: varchar
+      - name: customer_name
+        description: "first and last name of the customer who ordered"
+        data_type: varchar
       - name: customer_address_zip_code
+        description: "zip code of the customer address"
+        data_type: integer
       - name: order_id
+        description: "unique identifier of the order placed by the customer"
+        data_type: integer
       - name: product_name
+        description: "name of the product ordered by the customer"
+        data_type: varchar
       - name: product_category_name
+        description: "name of the category of the product ordered by the customer"
+        data_type: varchar
       - name: brand_name
+        description: "name of the brand of the product ordered by the customer"
+        data_type: varchar
       - name: order_created_at
+        description: "day when the order was placed by the customer"
+        data_type: date
       - name: order_shipped_at
+        description: "day when the order was shipped"
+        data_type: date
       - name: is_order_shipped
+        description: "the date of shipping is different from '2500-01-01"
+        data_type: boolean
       - name: pending_order_item_number
-      - name: available_quantity
-      - name: is_out_of_stock_item
+        description: "number of items of the product ordered but not shipped"
+        data_type: integer
       - name: list_price
+        description: "basic customer price before discount"
+        data_type: decimal
       - name: pending_order_turnover_before_discount
+        description: "turnover before discount application of unshipped orders"
+        data_type: decimal
       - name: pending_order_turnover
+        description: "turnover discount applied of unshipped orders"
+        data_type: decimal
       - name: order_turnover_before_discount
+        description: "turnover before discount application of shipped orders"
+        data_type: decimal
       - name: order_turnover
+        description: "turnover discount applied of shipped orders"
+        data_type: decimal
 
       
