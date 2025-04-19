@@ -1,0 +1,13 @@
+models:
+  - name: stg_stocks
+    description: "Staging model for the store product stock table"
+    columns:
+      - name: store_id
+        description: "unique identifier of the store"
+        data_type: integer
+      - name: product_id
+        description: "unique identifier of the product"
+        data_type: integer
+      - name: stock_quantity
+        description: "quantity in stock of the product for the store"
+        data_type: integer
