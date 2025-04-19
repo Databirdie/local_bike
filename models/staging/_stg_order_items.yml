@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: stg_order_items
+    description: "Staging model for the order_items table"
+    columns:
+      - name: order_id
+        description: "unique identifier of the order"
+        data_type: integer
+      - name: item_id
+        description: "unidque identifier of the item"
+      - name: product_id
+        data_type: integer
+        description: "unique identifier of the product"
+      - name: quantity
+        description: "number of items in the order"
+        data_type: integer
+      - name: list_price
+        description: "price of items in the order"
+        data_type: decimal
+      - name: discount
+        description: "discount offered on the order"
+        data_type: decimal

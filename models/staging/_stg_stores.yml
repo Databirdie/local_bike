@@ -1,0 +1,28 @@
+models:
+  - name: stg_stores
+    description: "Staging model for the stores table"
+    columns:
+      - name: store_id
+        description: "unique identifier of the store"
+        data_type: integer
+      - name: store_name
+        description: "name of the store"
+        data_type: varchar
+      - name: store_phone_number
+        description: "phone number of the store"
+        data_type: varchar
+      - name: store_email
+        description: "email of the store"
+        data_type: varchar
+      - name: store_address_street
+        description: "street name of the store address"
+        data_type: varchar
+      - name: store_address_city
+        description: "city name of the store address"
+        data_type: varchar
+      - name: store_address_state
+        description: "state name of the store address"
+        data_type: varchar
+      - name: store_address_zip_code
+        description: "zip code of the store address"
+        data_type: integer

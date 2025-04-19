@@ -1,0 +1,10 @@
+models:
+  - name: stg_brands
+    description: "Staging model for the categories of products table"
+    columns:
+      - name: brand_id
+        description: "unique identifier of the brand"
+        data_type: integer
+      - name: brand_name
+        description: "name of the brand"
+        data_type: varchar

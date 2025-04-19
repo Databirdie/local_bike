@@ -1,0 +1,31 @@
+models:
+  - name: stg_customers
+    description: "Staging model for the customers table"
+    columns:
+      - name: customer_id
+        description: "unique identifier of the customer"
+        data_type: integer
+      - name: customer_first_name
+        description: "first name of the customer"
+        data_type: varchar
+      - name: customer_last_name
+        description: "last name of the customer"
+        data_type: varchar
+      - name: customer_phone_number
+        description: "phone number of the customer"
+        data_type: varchar
+      - name: customer_email
+        description: "email of the customer"
+        data_type: varchar
+      - name: customer_address_street
+        description: "street name of the customer address"
+        data_type: varchar
+      - name: customer_address_city
+        description: "city name of the customer address"
+        data_type: varchar
+      - name: customer_address_state
+        description: "state name of the customer address"
+        data_type: varchar
+      - name: customer_address_zip_code
+        description: "zip code of the customer address"
+        data_type: integer

@@ -1,0 +1,28 @@
+models:
+  - name: stg_staffs
+    description: "Staging model for the staff members table"
+    columns:
+      - name: staff_id
+        description: "unique identifier of the staff member"
+        data_type: integer
+      - name: store_id
+        description: "unique identifier of the store"
+        data_type: integer
+      - name: manager_id
+        description: "unique identifier of the manager"
+        data_type: integer
+      - name: staff_first_name
+        description: "first name of the staff member"
+        data_type: varchar
+      - name: staff_last_name
+        description: "last name of the staff member"
+        data_type: varchar
+      - name: staff_email
+        description: "email of the staff member"
+        data_type: varchar
+      - name: staff_phone_number
+        description: "phone number of the staff member"
+        data_type: varchar
+      - name: is_active_staff
+        description: "the contract with the staff member is open"
+        data_type: boolean
