@@ -7,3 +7,5 @@ sources:
       - name: brands
       - name: orders
       - name: order_items
+      - name: products
+      

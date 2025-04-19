@@ -22,10 +22,10 @@ clean-targets:
   - "dbt_packages"
 
 models:
-  +persist_docs:
+  local_bike:
+    +persist_docs:
       relation: true
       columns: true
-  local_bike:
     staging:
       +materialized: table
     marts:
