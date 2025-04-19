@@ -1,12 +1,14 @@
 SELECT  sto.store_name
-, sto.store_address_zip
+, sto.store_address_zip_code
 , sta.staff_first_name
 , sta.staff_last_name
 , c.customer_first_name
 , c.customer_last_name
+, c.customer_address_zip_code
 , o.order_id
-, o.order_status_id
-, oi.product_id
+, p.product_name
+, cat.product_category_name
+, b.brand_name
 , o.order_created_at
 , o.order_shipped_at
 , case when o.order_shipped_at < '2500-01-01' then true else false end as is_order_shipped
@@ -36,4 +38,4 @@ inner join {{ ref('stg_products')}} as p
 inner join {{ ref('stg_brands')}} as b 
     on b.brand_id = p.brand_id
 inner join {{ ref('stg_categories')}} as cat 
-    on cat.category_id = p.product_category_id
+    on cat.product_category_id = p.category_id
