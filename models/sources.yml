@@ -6,3 +6,4 @@ sources:
     tables:
       - name: brands
       - name: orders
+      - name: order_items
