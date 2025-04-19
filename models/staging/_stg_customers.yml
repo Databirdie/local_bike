@@ -3,8 +3,12 @@ models:
     description: "Staging model for the customers table"
     columns:
       - name: customer_id
-        description: "unique identifier of the customer"
+        description: "Primary key, unique identifier of the customer"
         data_type: integer
+        data_tests:
+          - unique
+          - not_null
+          
       - name: customer_first_name
         description: "first name of the customer"
         data_type: varchar

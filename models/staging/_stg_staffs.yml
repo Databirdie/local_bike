@@ -3,13 +3,22 @@ models:
     description: "Staging model for the staff members table"
     columns:
       - name: staff_id
-        description: "unique identifier of the staff member"
+        description: "Primary key, unique identifier of the staff member"
         data_type: integer
+        data_tests:
+          - unique
+          - not_null
+          
       - name: store_id
-        description: "unique identifier of the store"
+        description: "Foreign key linking the staff member to the store he works for"
         data_type: integer
+        tests:
+          - relationships:
+              to: ref('stg_stotres')
+              field: store_id
+
       - name: manager_id
-        description: "unique identifier of the manager"
+        description: "identifier of the manager of the staff member"
         data_type: integer
       - name: staff_first_name
         description: "first name of the staff member"

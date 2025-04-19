@@ -1,7 +1,5 @@
 SELECT  sto.store_name
-, sto.store_address_city
-, geo.latitude
-, geo.longitude
+, sto.store_address_zip
 , sta.staff_first_name
 , sta.staff_last_name
 , c.customer_first_name
@@ -22,9 +20,20 @@ SELECT  sto.store_name
 , case when o.order_shipped_at < '2500-01-01' then round(oi.ordered_quantity * (oi.list_price - (oi.list_price * oi.discount)),2) else 0 end as order_turnover
 
 from  {{ ref('stg_orders') }} o 
-inner join {{ ref('stg_order_items') }} oi on oi.order_id = o.order_id
-inner join {{ ref('stg_stocks') }} st on st.store_id = o.store_id and st.product_id = oi.product_id
-inner join {{ ref('stg_stores') }} sto on sto.store_id = o.store_id 
-inner join {{ ref('stg_staffs') }} sta on sta.staff_id = o.staff_id 
-inner join {{ ref('stg_customers')}} c on c.customer_id = o.customer_id
-inner join {{ ref('stg_us_geo')}} geo on geo.zip_code = sto.store_address_zip_code
+inner join {{ ref('stg_order_items') }} as oi 
+    on oi.order_id = o.order_id
+inner join {{ ref('stg_stocks') }} as st 
+    on st.store_id = o.store_id 
+    and st.product_id = oi.product_id
+inner join {{ ref('stg_stores') }} as sto 
+    on sto.store_id = o.store_id 
+inner join {{ ref('stg_staffs') }} as sta 
+    on sta.staff_id = o.staff_id 
+inner join {{ ref('stg_customers')}} as c 
+    on c.customer_id = o.customer_id
+inner join {{ ref('stg_products')}} as p 
+    on p.product_id = oi.product_id
+inner join {{ ref('stg_brands')}} as b 
+    on b.brand_id = p.brand_id
+inner join {{ ref('stg_categories')}} as cat 
+    on cat.category_id = p.product_category_id
