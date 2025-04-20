@@ -7,6 +7,7 @@ select
     case when order_status = 1 then 'shipped' else 'pending' end as order_status_name,
     order_date as order_created_at,
     required_date as order_forecast_shipping_date,
-    case when shipped_date = 'NULL' then '2500-01-01' else shipped_date end as order_shipped_at
+    -- dealing 'NULL' string values and replace them with a future date to keep data type consistency
+    coalesce(case when shipped_date = 'NULL' then null else shipped_date end, '2500-01-01') as order_shipped_at
 
 from {{ source('local_bike', 'orders') }}
