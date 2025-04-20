@@ -4,15 +4,24 @@ models:
   - name: mrt_local_bike_store_daily_orders
     description: '{{ doc("mrt_local_bike_store_daily_orders") }}'
     columns:
+      - name: store_id
+        description: "identifier of the store"
+        data_type: integer
       - name: store_address_zip_code
         description: "zip code of the store address"
         data_type: integer
       - name: store_name
         description: "name of the store"
         data_type: varchar
+      - name: staff_id
+        description: "identifier of the staff member"
+        data_type: integer
       - name: staff_name
         description: "first and last name of the store staff member who made the deal"
         data_type: varchar
+      - name: customer_id
+        description: "identifier of the customer"
+        data_type: integer
       - name: customer_name
         description: "first and last name of the customer who ordered"
         data_type: varchar
@@ -21,6 +30,9 @@ models:
         data_type: integer
       - name: order_id
         description: "unique identifier of the order placed by the customer"
+        data_type: integer
+      - name: product_id
+        description: "identifier of the product"
         data_type: integer
       - name: product_name
         description: "name of the product ordered by the customer"
@@ -43,11 +55,8 @@ models:
       - name: pending_order_item_number
         description: "number of items of the product ordered but not shipped"
         data_type: integer
-      - name: list_price
-        description: "basic customer price before discount"
-        data_type: decimal
-      - name: discount
-        description: "% discount on the list price"
+      - name: shipped_order_turnover_before_discount
+        description: "turnover before discount application of unshipped orders"
         data_type: decimal
       - name: pending_order_turnover_before_discount
         description: "turnover before discount application of unshipped orders"
