@@ -1,4 +1,4 @@
-{% docs mrt_local_bike_store_orders %}
+{% docs mrt_local_bike_store_daily_orders %}
 
 This model generates a daily summary of product orders for each customer related to each store and staff member, including the following metrics:
 

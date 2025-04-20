@@ -1,8 +1,8 @@
 version: 2
 
 models:
-  - name: mrt_local_bike_store_orders
-    description: '{{ doc("mrt_local_bike_store_orders") }}'
+  - name: mrt_local_bike_store_daily_orders
+    description: '{{ doc("mrt_local_bike_store_daily_orders") }}'
     columns:
       - name: store_address_zip_code
         description: "zip code of the store address"
@@ -45,6 +45,9 @@ models:
         data_type: integer
       - name: list_price
         description: "basic customer price before discount"
+        data_type: decimal
+      - name: discount
+        description: "% discount on the list price"
         data_type: decimal
       - name: pending_order_turnover_before_discount
         description: "turnover before discount application of unshipped orders"
