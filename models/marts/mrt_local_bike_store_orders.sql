@@ -11,8 +11,9 @@ select
     , order_created_at
     , order_shipped_at
     , is_order_shipped
-    , pending_order_item_number
+    , pending_order_product_quantity
     , list_price
+    , discount
     , pending_order_turnover_before_discount
     , pending_order_turnover
     , order_turnover_before_discount
