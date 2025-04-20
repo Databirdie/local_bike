@@ -1,5 +1,5 @@
 # local_bike – dbt Project
-[![Beautiful image of a bike.](https://media.theradavist.com/uploads/2015/02/Santa_Cruz_Highball_29-17.jpg?fit=2000,2000&quality=75)
+![Beautiful image of a bike.](https://media.theradavist.com/uploads/2015/02/Santa_Cruz_Highball_29-17.jpg?fit=2000,2000&quality=75)
 ## Overview
 
 This repository contains the dbt transformation logic for the **Local Bike** project, which aims to provide analytics-ready datasets to support business decisions for a retail bike company.
@@ -11,8 +11,8 @@ This dashboard is the **first step of a broader study**. It highlights potential
 
 ## Tech Stack
 
-- **dbt-core**
-- **PostgreSQL** (or specify your warehouse: BigQuery, Snowflake, etc.)
+- **dbt-cloud**
+- **BigQuery** 
 - **Tableau** (for visualization)
 
 ## Project Structure
